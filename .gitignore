@@ -5,6 +5,6 @@ target/
 out/
 
 *.iml
-.idea/*
+.idea/
 !vcs.xml
 *.txt
