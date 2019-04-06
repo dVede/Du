@@ -5,5 +5,5 @@ target/
 out/
 
 *.iml
-.idea/*git
+.idea/*
 *.txt
