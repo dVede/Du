@@ -9,4 +9,5 @@ out/
 .idea/**/uiDesigner.xml
 .idea/**/workspace.xml
 .idea/inspectionProfiles/
+.idea/libraries/
 *.txt
