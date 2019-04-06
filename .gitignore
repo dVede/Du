@@ -1,0 +1,9 @@
+#folder target
+target/
+
+#folder out
+out/
+
+*.iml
+.idea/*git
+*.txt
