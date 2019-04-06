@@ -72,6 +72,7 @@ public class DuMethods {
      * @throws MyException Выкидывается в том случае, когда путь файла не найден или при
      * недостаточном количестве аргументов
      */
+
     public List<String> answer(String[] filePaths) throws IOException, MyException{
         if (filePaths == null) {
             throw new MyException("Не введены аргументы");
