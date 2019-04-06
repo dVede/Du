@@ -90,7 +90,7 @@ public class DuParseTest {
         Assertions.assertEquals(excepted, actual);
     }
     @Test
-    public void withNoUseUnit() throws IOException {
+    public void withNoUseFormat() throws IOException {
         String[] args1 = {"-c", "--si", "1.txt",
                 "C:\\Users\\пользователь\\IdeaProjects\\du\\out\\artifacts\\du_jar\\testDirectory"};
         DuParse.main(args1);
