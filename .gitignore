@@ -6,5 +6,7 @@ out/
 
 *.iml
 !vcs.xml
-*.xml
+.idea/**/uiDesigner.xml
+.idea/**/workspace.xml
+.idea/inspectionProfiles/
 *.txt
