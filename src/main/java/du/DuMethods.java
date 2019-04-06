@@ -63,6 +63,7 @@ public class DuMethods {
 
     private static final String[] FORMATS = {"B", "KB", "MB", "GB"};
 
+
     /**
      * Получение конечного результата
      * @param filePaths Файлы, размеры которыз нужно найти
