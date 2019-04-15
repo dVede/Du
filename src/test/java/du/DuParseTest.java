@@ -57,8 +57,7 @@ public class DuParseTest {
     @Test
     public void noArgumentTest() throws IOException {
         String[] args1 = {"-c", "-h"};
-        exit.expectSystemExit();
-        System.exit(1);
+        exit.expectSystemExitWithStatus(1);
         DuParse.main(args1);
     }
 
@@ -74,8 +73,7 @@ public class DuParseTest {
     @Test
     public void fileNotFound() throws IOException {
         String[] args1 = {"-c", "-h", "2.txt", "testDirectory"};
-        exit.expectSystemExit();
-        System.exit(1);
+        exit.expectSystemExitWithStatus(1);
         DuParse.main(args1);
     }
 
