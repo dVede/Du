@@ -11,3 +11,4 @@ out/
 .idea/inspectionProfiles/
 .idea/libraries/
 *.txt
+!*.jpg
