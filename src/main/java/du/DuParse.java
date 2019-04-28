@@ -28,7 +28,6 @@ public class DuParse {
             parser.parseArgument(args);
         } catch (CmdLineException e) {
             System.err.println(e.getMessage());
-            System.err.println("_____");
             parser.printUsage(System.err);
             return;
         }
@@ -39,7 +38,7 @@ public class DuParse {
             out.forEach(System.out::println);
         }
         catch (DuMethods.MyException e){
-            System.err.println(e.getMessage());
+            System.err.println("No file chosen");
         }
     }
 }

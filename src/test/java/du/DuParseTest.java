@@ -40,7 +40,7 @@ public class DuParseTest {
         Path dir2 = Paths.get("src","test","resources","testDirectory");
         String[] args1 = {"-c", "-h", dir1.toString(), dir2.toString()};
         DuParse.main(args1);
-        String excepted = "Суммарный размер равен 499 KB\r\n" ;
+        String excepted = "Суммарный размер равен 499 KB" + System.lineSeparator() ;
         String actual = outContent.toString();
         Assertions.assertEquals(excepted, actual);
     }
@@ -49,7 +49,7 @@ public class DuParseTest {
     public void absoluteTest() throws IOException { ;
         String[] args1 = {"-c", "-h", "1.txt", dir2.toString()};
         DuParse.main(args1);
-        String excepted = "Суммарный размер равен 413 KB\r\n" ;
+        String excepted = "Суммарный размер равен 413 KB" + System.lineSeparator();
         String actual = outContent.toString();
         Assertions.assertEquals(excepted, actual);
     }
@@ -61,13 +61,10 @@ public class DuParseTest {
         DuParse.main(args1);
     }
 
-    @Test
+    @Test(expected = NullPointerException.class)
     public void notCorrectTest() throws IOException {
         String[] args1 = {"-correct", "-h"};
         DuParse.main(args1);
-        String excepted = "" ;
-        String actual = outContent.toString();
-        Assertions.assertEquals(excepted, actual);
     }
 
     @Test
@@ -81,8 +78,8 @@ public class DuParseTest {
     public void withNoSummarySize() throws IOException {
         String[] args1 = {"-h", "--si", "1.txt", dir2.toString()};
         DuParse.main(args1);
-        String excepted = "Размер 1.txt равен 12 KB\r\n" +
-                "Размер " + dir2.toString() + " равен 410 KB\r\n";
+        String excepted = "Размер 1.txt равен 12 KB" + System.lineSeparator() +
+                "Размер " + dir2.toString() + " равен 410 KB" + System.lineSeparator();
         String actual = outContent.toString();
         Assertions.assertEquals(excepted, actual);
     }
@@ -91,8 +88,8 @@ public class DuParseTest {
     public void onlyUseUnit() throws IOException {
         String[] args1 = {"--si", "1.txt", dir2.toString()};
         DuParse.main(args1);
-        String excepted = "Размер 1.txt равен 12\r\n" +
-                "Размер " + dir2.toString() + " равен 410\r\n" ;
+        String excepted = "Размер 1.txt равен 12" + System.lineSeparator() +
+                "Размер " + dir2.toString() + " равен 410" + System.lineSeparator();
         String actual = outContent.toString();
         Assertions.assertEquals(excepted, actual);
     }
@@ -102,7 +99,7 @@ public class DuParseTest {
         String[] args1 = {"-c", "--si", "1.txt",
                 dir2.toString()};
         DuParse.main(args1);
-        String excepted = "Суммарный размер равен 423\r\n";
+        String excepted = "Суммарный размер равен 423" + System.lineSeparator();
         String actual = outContent.toString();
         Assertions.assertEquals(excepted, actual);
     }

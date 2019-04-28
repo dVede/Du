@@ -36,7 +36,7 @@ public class DuMethods {
      * @throws IOException Выкидывется в тех случаях, когда не удалось найти
      *                     размер файла.
      */
-    public long fileSize(Path path) throws IOException {
+    private long fileSize(Path path) throws IOException {
         ArrayList<Path> paths = new ArrayList<>(Collections.singletonList(path));
         ArrayList<Path> toAddPaths = new ArrayList<>();
         long totalSize = 0;
